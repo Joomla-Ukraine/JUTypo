@@ -29,7 +29,6 @@
       "JUTypo\\": "src"
     }
   },
-  "minimum-stability": "stable",
   "config": {
     "optimize-autoloader": true,
     "use-include-path": false,
