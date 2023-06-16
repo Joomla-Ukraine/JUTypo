@@ -6,9 +6,9 @@ use JUTypo\Rule\AbstractRule;
 
 class AfterDot extends AbstractRule
 {
-	public string $name = 'Забутий пробіл після крапки';
+	public $name = 'Забутий пробіл після крапки';
 
-	protected int $sort = 300;
+	protected $sort = 300;
 
 	public function handler(string $text): string
 	{

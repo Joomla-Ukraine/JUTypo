@@ -6,7 +6,7 @@ use JUTypo\Rule\AbstractRule;
 
 class DayMonth extends AbstractRule
 {
-	public string $name = 'Нерозривний пробіл між числом та місяцем';
+	public $name = 'Нерозривний пробіл між числом та місяцем';
 
 	public function handler(string $text): string
 	{

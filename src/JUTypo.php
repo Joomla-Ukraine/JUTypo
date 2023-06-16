@@ -2,30 +2,27 @@
 
 namespace JUTypo;
 
-use Exception;
-use JUTypo\Rule\AbstractRule;
-
 class JUTypo
 {
 	/**
 	 * @var Rule\AbstractRule[]
 	 */
-	protected array $rules = [];
+	protected $rules = [];
 
 	/**
 	 * @var Debug
 	 */
-	protected Debug $debug;
+	protected $debug;
 
 	/**
 	 * @var array<array<array<int, array<string, string>>|string>|string>
 	 */
-	protected array $arDebug = [];
+	protected $arDebug = [];
 
 	/**
 	 * @var SafeBlock
 	 */
-	protected SafeBlock $safeBlock;
+	protected $safeBlock;
 
 	public function __construct(bool $debug = false)
 	{
@@ -40,7 +37,7 @@ class JUTypo
 
 	public function addRule(object $ruleClass): void
 	{
-		if(true === $ruleClass instanceof \JUTypo\Rule\AbstractRule)
+		if(true === is_subclass_of($ruleClass, 'Akh\Typograf\Rule\AbstractRule'))
 		{
 			$this->rules[ spl_object_hash($ruleClass) ] = $ruleClass;
 			$this->sortRule();
@@ -124,12 +121,9 @@ class JUTypo
 			return $this->debug;
 		}
 
-		throw new \RuntimeException('Debug mode not enable');
+		throw new \Exception('Debug mode not enable');
 	}
 
-	/**
-	 * @throws \ReflectionException
-	 */
 	protected function initRules(): void
 	{
 		$all = (new RuleFinder())->getAllRule();
@@ -148,7 +142,7 @@ class JUTypo
 
 	protected function sortRule(): void
 	{
-		uasort($this->rules, static function ($a, $b)
+		uasort($this->rules, function ($a, $b)
 		{
 			return $a->getSort() <=> $b->getSort();
 		});

@@ -6,8 +6,8 @@ use JUTypo\Rule\AbstractRule;
 
 class ToNebud extends AbstractRule
 {
-	public string $name = 'Дефіс перед «то», «небудь»';
-	public int $sort = 300;
+	public $name = 'Дефіс перед «то», «небудь»';
+	public $sort = 300;
 
 	public function handler(string $text): string
 	{
@@ -34,7 +34,7 @@ class ToNebud extends AbstractRule
 		$group   = implode('|', $words);
 		$pattern = '#(' . $group . ')-?(\s|&nbsp;)-?(то|небудь)([' . $this->char[ 'charEnd' ] . ']|\s|<|&nbsp;|$)#iu';
 
-		return preg_replace_callback($pattern, static function ($matches)
+		return preg_replace_callback($pattern, function ($matches)
 		{
 			return $matches[ 1 ] . '-' . $matches[ 3 ] . ('&nbsp;' === $matches[ 4 ] ? ' ' : $matches[ 4 ]);
 		}, $text);

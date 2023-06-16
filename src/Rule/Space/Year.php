@@ -6,7 +6,7 @@ use JUTypo\Rule\AbstractRule;
 
 class Year extends AbstractRule
 {
-	public string $name = 'Пробіл між числом і словом рік';
+	public $name = 'Пробіл між числом і словом рік';
 
 	public function handler(string $text): string
 	{

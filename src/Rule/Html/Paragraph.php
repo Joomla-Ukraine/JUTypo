@@ -6,11 +6,11 @@ use JUTypo\Rule\AbstractRule;
 
 class Paragraph extends AbstractRule
 {
-	public string $name = 'Додавання тегу <p>';
+	public $name = 'Додавання тегу <p>';
 
-	protected bool $active = false;
+	protected $active = false;
 
-	protected int $sort = 800;
+	protected $sort = 800;
 
 	public function handler(string $text): string
 	{

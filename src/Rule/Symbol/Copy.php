@@ -6,7 +6,7 @@ use JUTypo\Rule\AbstractRule;
 
 class Copy extends AbstractRule
 {
-    public string $name = 'Копірайт ©, торгова марка ™,®';
+    public $name = 'Копірайт ©, торгова марка ™,®';
 
     public function handler(string $text): string
     {

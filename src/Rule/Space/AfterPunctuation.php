@@ -6,9 +6,9 @@ use JUTypo\Rule\AbstractRule;
 
 class AfterPunctuation extends AbstractRule
 {
-	public string $name = 'Пробіл після знаків пунктуації, крім крапки';
+	public $name = 'Пробіл після знаків пунктуації, крім крапки';
 
-	protected int $sort = 300;
+	protected $sort = 300;
 
 	public function handler(string $text): string
 	{

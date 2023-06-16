@@ -6,9 +6,9 @@ use JUTypo\Rule\AbstractRule;
 
 class DelRepeatSpace extends AbstractRule
 {
-	public string $name = 'Видалення повторюваних пробілів';
+	public $name = 'Видалення повторюваних пробілів';
 
-	protected int $sort = -100;
+	protected $sort = -100;
 
 	public function handler(string $text): string
 	{

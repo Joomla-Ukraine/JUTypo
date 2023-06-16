@@ -6,9 +6,9 @@ use JUTypo\Rule\AbstractRule;
 
 class Fraction extends AbstractRule
 {
-	public string $name = 'Заміна дробів 1/2, 1/4, 3/4 на відповідні символи';
+	public $name = 'Заміна дробів 1/2, 1/4, 3/4 на відповідні символи';
 
-	public bool $active = false;
+	public $active = false;
 
 	public function handler(string $text): string
 	{

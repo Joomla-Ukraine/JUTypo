@@ -6,7 +6,7 @@ use JUTypo\Rule\AbstractRule;
 
 class DimensionSup extends AbstractRule
 {
-	public string $name = 'Верхній індекс для см2, м2 тощо';
+	public $name = 'Верхній індекс для см2, м2 тощо';
 
 	public function handler(string $text): string
 	{

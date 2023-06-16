@@ -6,9 +6,9 @@ use JUTypo\Rule\AbstractRule;
 
 class DelBeforePunctuation extends AbstractRule
 {
-	public string $name = 'Видалення пробілу перед розділовими знаками';
+	public $name = 'Видалення пробілу перед розділовими знаками';
 
-	protected int $sort = 300;
+	protected $sort = 300;
 
 	public function handler(string $text): string
 	{

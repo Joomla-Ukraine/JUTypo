@@ -6,9 +6,9 @@ use JUTypo\Rule\AbstractRule;
 
 class ANo extends AbstractRule
 {
-	public string $name = 'Розставлення ком перед а, але';
+	public $name = 'Розставлення ком перед а, але';
 
-	protected int $sort = 300;
+	protected $sort = 300;
 
 	public function handler(string $text): string
 	{

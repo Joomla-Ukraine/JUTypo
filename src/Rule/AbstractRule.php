@@ -7,7 +7,7 @@ abstract class AbstractRule
 	/**
 	 * @var string
 	 */
-	public string $name = 'Name rule';
+	public $name = 'Name rule';
 
 	/**
 	 * @var array
@@ -29,17 +29,17 @@ abstract class AbstractRule
 	/**
 	 * @var bool
 	 */
-	protected bool $active = true;
+	protected $active = true;
 
 	/**
 	 * @var int
 	 */
-	protected int $sort = 500;
+	protected $sort = 500;
 
 	/**
-	 * @var array
+	 * @var mixed[]
 	 */
-	protected array $settings = [];
+	protected $settings = [];
 
 	public function setSort(int $sort): void
 	{
@@ -62,7 +62,7 @@ abstract class AbstractRule
 	}
 
 	/**
-	 * @param array $settings
+	 * @param mixed[] $settings
 	 */
 	public function setSettings(array $settings): void
 	{
@@ -78,7 +78,7 @@ abstract class AbstractRule
 	}
 
 	/**
-	 * @return array
+	 * @return mixed[]
 	 */
 	public function getSettings(): array
 	{

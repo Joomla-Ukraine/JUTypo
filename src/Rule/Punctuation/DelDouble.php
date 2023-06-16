@@ -6,9 +6,9 @@ use JUTypo\Rule\AbstractRule;
 
 class DelDouble extends AbstractRule
 {
-	public string $name = 'Зайві розділові знаки';
+	public $name = 'Зайві розділові знаки';
 
-	protected array $settings = [
+	protected $settings = [
 		'maxLenMark' => 3,
 	];
 

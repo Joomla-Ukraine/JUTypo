@@ -6,16 +6,16 @@ use JUTypo\Rule\AbstractRule;
 
 class Quote extends AbstractRule
 {
-	public string $name = 'Розставлення лапок правильного вигляду';
+	public $name = 'Розставлення лапок правильного вигляду';
 
 	/**
 	 * @var int
 	 */
 	public int $maxLevel = 3;
 
-	protected int $sort = 300;
+	protected $sort = 300;
 
-	protected array $settings = [
+	protected $settings = [
 		'inch'    => true,
 		'quote'   => [
 			'left'  => [ '«', '„', '‚' ],

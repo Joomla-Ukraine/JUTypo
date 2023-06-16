@@ -6,9 +6,9 @@ use JUTypo\Rule\AbstractRule;
 
 class DelRepeatN extends AbstractRule
 {
-	public string $name = 'Видалення повторюваних переносів рядка';
+	public $name = 'Видалення повторюваних переносів рядка';
 
-	protected int $sort = -100;
+	protected $sort = -100;
 
 	public function handler(string $text): string
 	{

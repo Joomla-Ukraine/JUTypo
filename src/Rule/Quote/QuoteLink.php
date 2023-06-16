@@ -6,7 +6,7 @@ use JUTypo\Rule\AbstractRule;
 
 class QuoteLink extends AbstractRule
 {
-	public string $name = 'Лапки поза тегом <a>';
+	public $name = 'Лапки поза тегом <a>';
 
 	public function handler(string $text): string
 	{

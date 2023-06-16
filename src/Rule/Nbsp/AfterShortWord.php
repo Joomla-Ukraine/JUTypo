@@ -6,9 +6,9 @@ use JUTypo\Rule\AbstractRule;
 
 class AfterShortWord extends AbstractRule
 {
-	public string $name = 'Нерозривний пробіл, після короткого слова';
+	public $name = 'Нерозривний пробіл, після короткого слова';
 
-	protected array $settings = [
+	protected $settings = [
 		'len' => 2,
 	];
 

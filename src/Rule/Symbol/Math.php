@@ -6,7 +6,7 @@ use JUTypo\Rule\AbstractRule;
 
 class Math extends AbstractRule
 {
-	public string $name = 'Математичні знаки більше, менше, плюс, дорівнює, помножити';
+	public $name = 'Математичні знаки більше, менше, плюс, дорівнює, помножити';
 
 	public function handler(string $text): string
 	{

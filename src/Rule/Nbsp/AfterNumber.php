@@ -6,9 +6,9 @@ use JUTypo\Rule\AbstractRule;
 
 class AfterNumber extends AbstractRule
 {
-	public string $name = 'Нерозривний пробіл, після чисел';
+	public $name = 'Нерозривний пробіл, після чисел';
 
-	protected array $settings = [
+	protected $settings = [
 		'maxLen' => 5,
 	];
 

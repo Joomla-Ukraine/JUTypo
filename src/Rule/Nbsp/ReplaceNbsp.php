@@ -6,11 +6,11 @@ use JUTypo\Rule\AbstractRule;
 
 class ReplaceNbsp extends AbstractRule
 {
-	public string $name = 'Заміна нерозривного пробілу на звичайний перед типографуванням';
+	public $name = 'Заміна нерозривного пробілу на звичайний перед типографуванням';
 
-	protected int $sort = -100;
+	protected $sort = -100;
 
-	protected bool $active = false;
+	protected $active = false;
 
 	public function handler(string $text): string
 	{

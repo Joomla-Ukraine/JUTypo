@@ -6,9 +6,9 @@ use JUTypo\Rule\AbstractRule;
 
 class Hellip extends AbstractRule
 {
-	public string $name = 'Заміна трьох крапок на три крапки';
+	public $name = 'Заміна трьох крапок на три крапки';
 
-	protected int $sort = 800;
+	protected $sort = 800;
 
 	public function handler(string $text): string
 	{

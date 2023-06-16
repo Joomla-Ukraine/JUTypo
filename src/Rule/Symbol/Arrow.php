@@ -6,7 +6,7 @@ use JUTypo\Rule\AbstractRule;
 
 class Arrow extends AbstractRule
 {
-	public string $name = 'Стрілочки -> → →, <- → ←';
+	public $name = 'Стрілочки -> → →, <- → ←';
 
 	public function handler(string $text): string
 	{

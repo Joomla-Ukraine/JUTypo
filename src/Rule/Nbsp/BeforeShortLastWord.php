@@ -6,9 +6,9 @@ use JUTypo\Rule\AbstractRule;
 
 class BeforeShortLastWord extends AbstractRule
 {
-	public string $name = 'Нерозривний пробіл перед останнім коротким словом у реченні';
+	public $name = 'Нерозривний пробіл перед останнім коротким словом у реченні';
 
-	protected array $settings = [
+	protected $settings = [
 		'len' => 3,
 	];
 

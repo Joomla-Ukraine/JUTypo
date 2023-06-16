@@ -6,13 +6,13 @@ use JUTypo\Rule\AbstractRule;
 
 class ReplaceDash extends AbstractRule
 {
-	public string $name = 'Заміна дефіса на тире та виправлення дублів, перед типографуванням';
+	public $name = 'Заміна дефіса на тире та виправлення дублів, перед типографуванням';
 
-	protected array $settings = [
+	protected $settings = [
 		'len' => 2,
 	];
 
-	protected int $sort = -100;
+	protected $sort = -100;
 
 	public function handler(string $text): string
 	{

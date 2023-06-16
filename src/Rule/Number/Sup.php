@@ -6,7 +6,7 @@ use JUTypo\Rule\AbstractRule;
 
 class Sup extends AbstractRule
 {
-	public string $name = 'Нижній індекс для ^';
+	public $name = 'Нижній індекс для ^';
 
 	public function handler(string $text): string
 	{

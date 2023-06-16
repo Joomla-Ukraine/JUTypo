@@ -6,7 +6,7 @@ use JUTypo\Rule\AbstractRule;
 
 class BeforeBracket extends AbstractRule
 {
-	public string $name = 'Пробіл перед відкриваючою дужкою';
+	public $name = 'Пробіл перед відкриваючою дужкою';
 
 	public function handler(string $text): string
 	{

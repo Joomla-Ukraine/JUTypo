@@ -6,11 +6,11 @@ use JUTypo\Rule\AbstractRule;
 
 class BankAccount extends AbstractRule
 {
-	public string $name = 'Розбиття номера рахунку в банку';
+	public $name = 'Розбиття номера рахунку в банку';
 
 	public function handler(string $text): string
 	{
-		return preg_replace_callback('#(^| |>|&nbsp;)([0-9]{20})( |<|&nbsp;|$)#mu', static function ($matches)
+		return preg_replace_callback('#(^| |>|&nbsp;)([0-9]{20})( |<|&nbsp;|$)#mu', function ($matches)
 		{
 			$arNum   = [];
 			$arNum[] = substr($matches[ 2 ], 0, 5);

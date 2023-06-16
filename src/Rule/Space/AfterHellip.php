@@ -6,9 +6,9 @@ use JUTypo\Rule\AbstractRule;
 
 class AfterHellip extends AbstractRule
 {
-	public string $name = 'Пробіл після знаків трикрапок і трикрапок зі знаками запитання або оклику';
+	public $name = 'Пробіл після знаків трикрапок і трикрапок зі знаками запитання або оклику';
 
-	protected int $sort = 800;
+	protected $sort = 800;
 
 	public function handler(string $text): string
 	{

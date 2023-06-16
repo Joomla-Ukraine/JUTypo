@@ -6,9 +6,9 @@ use JUTypo\Rule\AbstractRule;
 
 class ExclamationQuestion extends AbstractRule
 {
-	public string $name = 'Заміна знаків оклику та запитання місцями';
+	public $name = 'Заміна знаків оклику та запитання місцями';
 
-	public int $sort = 800;
+	public $sort = 800;
 
 	public function handler(string $text): string
 	{

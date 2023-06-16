@@ -6,13 +6,13 @@ use JUTypo\Rule\AbstractRule;
 
 class Triad extends AbstractRule
 {
-	public string $name = 'Розбиття числа на тріади';
+	public $name = 'Розбиття числа на тріади';
 
-	public int $sort = 800;
+	public $sort = 800;
 
 	public function handler(string $text): string
 	{
-		return preg_replace_callback('#(^| |>|&nbsp;)([0-9]{5,})( |<|&nbsp;|$)#mu', static function ($matches)
+		return preg_replace_callback('#(^| |>|&nbsp;)([0-9]{5,})( |<|&nbsp;|$)#mu', function ($matches)
 		{
 			$num = str_replace(' ', '&thinsp;', number_format((int) $matches[ 2 ], 0, '', ' '));
 

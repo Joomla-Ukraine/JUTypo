@@ -6,9 +6,9 @@ use JUTypo\Rule\AbstractRule;
 
 class BeforeParticle extends AbstractRule
 {
-	public string $name = 'Неразрывной пробел перед «ль», «же», «би», «б»';
+	public $name = 'Неразрывной пробел перед «ль», «же», «би», «б»';
 
-	public int $sort = 510;
+	public $sort = 510;
 
 	public function handler(string $text): string
 	{

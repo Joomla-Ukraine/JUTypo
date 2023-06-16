@@ -6,11 +6,11 @@ use JUTypo\Rule\AbstractRule;
 
 class Phone extends AbstractRule
 {
-	public string $name = 'Форматування номера телефону';
+	public $name = 'Форматування номера телефону';
 
-	public bool $active = false;
+	public $active = false;
 
-	public array $settings = [
+	public $settings = [
 		'tpl' => '+$1&thinsp;$2&thinsp;$3&ndash;$4&ndash;$5',
 	];
 
