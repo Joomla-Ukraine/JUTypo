@@ -1,0 +1,53 @@
+<?php
+
+namespace JUTypo\Rule\Html;
+
+use JUTypo\Rule\AbstractRule;
+
+class Paragraph extends AbstractRule
+{
+	public string $name = 'Додавання тегу <p>';
+
+	protected bool $active = false;
+
+	protected int $sort = 800;
+
+	public function handler(string $text): string
+	{
+		$text  = trim($text);
+		$first = mb_strpos($text, '<p>');
+		$last  = mb_strrpos($text, '</p>');
+
+		if(false !== $first && false !== $last)
+		{
+			$newText = '';
+			$start   = trim(mb_substr($text, 0, $first));
+
+			if(!empty($start))
+			{
+				$newText .= $this->addParagraph($start);
+			}
+
+			$middle  = mb_substr($text, $first + mb_strlen('<p>'), $last - ($first + mb_strlen('<p>')));
+			$newText .= '<p>' . $middle . '</p>';
+
+			$end = trim(mb_substr($text, $last + mb_strlen('</p>')));
+
+			if(!empty($end))
+			{
+				$newText .= $this->addParagraph($end);
+			}
+
+			return $newText;
+		}
+
+		return $this->addParagraph($text);
+	}
+
+	protected function addParagraph(string $text): string
+	{
+		$text = trim($text);
+
+		return '<p>' . $text . '</p>';
+	}
+}

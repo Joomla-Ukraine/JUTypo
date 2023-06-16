@@ -1,0 +1,48 @@
+{
+  "name": "joomla-ua/jutypo",
+  "description": "JUTypo - typograpy texts",
+  "keywords": [
+    "php",
+    "typo",
+    "text",
+    "typograf",
+    "Typografy"
+  ],
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Denys Nosov",
+      "email": "denys@joomla-ua.org",
+      "homepage": "https://joomla-ua.org",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "denys@joomla-ua.org",
+    "issues": "https://github.com/Joomla-Ukraine/JUTypo/issues",
+    "forum": "https://github.com/Joomla-Ukraine/JUTypo/issues",
+    "source": "https://github.com/Joomla-Ukraine/JUTypo",
+    "docs": "https://github.com/Joomla-Ukraine/JUTypo/blob/master/README.md"
+  },
+  "autoload": {
+    "psr-4": {
+      "JUTypo\\": "src"
+    }
+  },
+  "minimum-stability": "stable",
+  "config": {
+    "optimize-autoloader": true,
+    "use-include-path": false,
+    "prepend-autoloader": true,
+    "prefer-dist": true,
+    "no-dev": true,
+    "sort-packages": true,
+    "archive-format": "zip"
+  },
+  "prefer-stable": true,
+  "require": {
+    "php": ">=7.4",
+    "ext-json": "*",
+    "ext-mbstring": "*"
+  }
+}
