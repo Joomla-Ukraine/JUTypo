@@ -2,6 +2,8 @@
 
 namespace JUTypo;
 
+use Exception;
+
 class JUTypo
 {
 	/**
@@ -121,9 +123,12 @@ class JUTypo
 			return $this->debug;
 		}
 
-		throw new \Exception('Debug mode not enable');
+		throw new \RuntimeException('Debug mode not enable');
 	}
 
+	/**
+	 * @throws \ReflectionException
+	 */
 	protected function initRules(): void
 	{
 		$all = (new RuleFinder())->getAllRule();
