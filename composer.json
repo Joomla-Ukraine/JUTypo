@@ -43,7 +43,6 @@
   "require": {
     "php": ">=7.4",
     "ext-json": "*",
-    "ext-mbstring": "*",
-    "symfony/html-sanitizer": "^6.3"
+    "ext-mbstring": "*"
   }
 }

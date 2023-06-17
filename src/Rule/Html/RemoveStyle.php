@@ -3,8 +3,6 @@
 namespace JUTypo\Rule\Html;
 
 use JUTypo\Rule\AbstractRule;
-use Symfony\Component\HtmlSanitizer\HtmlSanitizer;
-use Symfony\Component\HtmlSanitizer\HtmlSanitizerConfig;
 
 class RemoveStyle extends AbstractRule
 {
@@ -12,14 +10,14 @@ class RemoveStyle extends AbstractRule
 
 	public function handler(string $text): string
 	{
-		$sanitizer = new HtmlSanitizer(
-			(new HtmlSanitizerConfig())
-				->dropAttribute('style', 'span')
-				->dropAttribute('style', 'table')
-				->dropAttribute('style', 'p')
-				->dropAttribute('style', 'div')
-		);
+		$pattern = [
+			'#<span style=".*?">#s',
+			'#<table style=".*?">#s',
+			'#<p style=".*?">#s',
+			'#<div style=".*?">#s',
+		];
+		$replace = '';
 
-		return $sanitizer->sanitize($text);
+		return preg_replace($pattern, $replace, $text);
 	}
 }
