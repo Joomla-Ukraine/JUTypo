@@ -6,17 +6,22 @@ use JUTypo\Rule\AbstractRule;
 
 class RemoveStyle extends AbstractRule
 {
-	public $name = 'Видалення порожнього параграфу';
+	public $name = 'Видалення style';
 
 	public function handler(string $text): string
 	{
 		$pattern = [
-			'#<span style=".*?">#s',
-			'#<table style=".*?">#s',
-			'#<p style=".*?">#s',
-			'#<div style=".*?">#s',
+			'#<span style=".*?">#m',
+			'#<table style=".*?">#m',
+			'#<p style=".*?">#m',
+			'#<div style=".*?">#m',
 		];
-		$replace = '';
+		$replace = [
+			'<span>',
+			'<table>',
+			'<p>',
+			'<div>',
+		];
 
 		return preg_replace($pattern, $replace, $text);
 	}
